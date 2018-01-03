@@ -75,9 +75,7 @@ export default class KeyboardTextInputPrompt extends Component {
         this.onEndEditing();
     }
 
-    render() {
-		console.log('onclose', this.props.onClose);
-		
+    render() {	
         if (this.props.visible && !this.state.focused) {
             Keyboard.dismiss();
         }

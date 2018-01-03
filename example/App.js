@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 import KeyboardTextInputPrompt from 'keyboard-textinput-prompt';
+// import {createAnimatableComponent} from 'react-native-animatable';
 
 export default class App extends Component {
 
