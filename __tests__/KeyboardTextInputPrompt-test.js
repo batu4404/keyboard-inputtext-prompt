@@ -1,4 +1,5 @@
 // ./src/__tests__/KeyboardTextInputPrompt-test.js
+import React from 'react';
 import KeyboardTextInputPrompt from '../KeyboardTextInputPrompt';
 
 import renderer from 'react-test-renderer';

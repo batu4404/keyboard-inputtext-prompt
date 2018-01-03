@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
-import KeyboardTextInputPrompt from './src/KeyboardTextInputPrompt';
+import KeyboardTextInputPrompt from './KeyboardTextInputPrompt';
 
 export default class App extends Component {
 
@@ -8,7 +8,7 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            visibleInputPanel: false,
+            visibleInputPrompt: false,
             inputValue: '',
             placeholder: 'Enter your name'
         }
@@ -16,14 +16,14 @@ export default class App extends Component {
 
     onFocus = () => {
         this.setState({
-            visibleInputPanel: true,
+            visibleInputPrompt: true,
         })
     } 
 
 
     onClose = () => {
         this.setState({
-            visibleInputPanel: false,
+            visibleInputPrompt: false,
         })
     }
 
@@ -34,6 +34,7 @@ export default class App extends Component {
     }
 
     render() {
+		console.log('visible', this.state.visibleInputPrompt);
         return(
             <View style={styles.container}>
                 <TextInput 
@@ -49,7 +50,7 @@ export default class App extends Component {
                     inputValue={this.state.inputValue}
                     keyboardType='numeric'
                     onClose={this.onClose}
-                    visible={this.state.visibleInputPanel}
+                    visible={this.state.visibleInputPrompt}
                     placeholder={this.state.placeholder}
                     onEndEditing={this.onEndEditing}
                     underlineColorAndroid='transparent'

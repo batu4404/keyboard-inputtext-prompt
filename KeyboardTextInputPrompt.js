@@ -76,6 +76,8 @@ export default class KeyboardTextInputPrompt extends Component {
     }
 
     render() {
+		console.log('onclose', this.props.onClose);
+		
         if (this.props.visible && !this.state.focused) {
             Keyboard.dismiss();
         }
@@ -123,14 +125,16 @@ export default class KeyboardTextInputPrompt extends Component {
 KeyboardTextInputPrompt.propTypes = {
     inputValue: PropsType.string,
     keyboardType: PropsType.string,
-    visible: PropsType.bool.isRequired,
-    onEndEditing: PropsType.func.isRequired,
+    visible: PropsType.bool,
+    onEndEditing: PropsType.func,
     onClose: PropsType.func.isRequired,
 }
 
 KeyboardTextInputPrompt.defaultProps = {
     inputValue: '',
-    keyboardType: 'textInput',
+    keyboardType: 'default',
+	visible: false,
+	onClose: () => null,
 }
 
 const styles = StyleSheet.create({
