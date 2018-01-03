@@ -1,11 +1,14 @@
 {
   "name": "keyboard-textinput-prompt",
   "version": "0.1.0",
-  "main": "KeyboardTextInputPrompt.js",
+  "main": "src/KeyboardTextInputPrompt.js",
   "repository": {
     "url": "git@github.com:batu4404/keyboard-inputtext-prompt.git",
     "type": "git"
   },
+  "files": [
+    "src"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "react-native-scripts start",
@@ -15,13 +18,18 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "modulePathIgnorePatterns": [
+      "example"
+    ]
   },
-  "dependencies": { 
+  "dependencies": {
     "expo": "^23.0.4",
     "prop-types": "^15.6.0",
     "react": "16.0.0",
-    "react-native": "0.50.3"
+    "react-native": "0.50.3",
+    "react-native-animatable": "^1.2.4",
+    "react-navigation": "^1.0.0-beta.22"
   },
   "devDependencies": {
     "jest-expo": "23.0.0",
